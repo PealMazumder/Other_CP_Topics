@@ -1,5 +1,5 @@
 /*
-Problem Link : shorturl.at/myIJ4
+Problem Link : https://www.hackerearth.com/practice/algorithms/graphs/breadth-first-search/practice-problems/algorithm/monk-and-the-islands/
 */
 #include<bits/stdc++.h>
 #define all(p)					p.begin(),p.end()
