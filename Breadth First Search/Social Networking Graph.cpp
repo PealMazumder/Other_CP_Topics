@@ -1,5 +1,5 @@
 /*
-Problem Link: shorturl.at/hjHLR
+Problem Link: https://www.hackerearth.com/practice/algorithms/graphs/breadth-first-search/practice-problems/algorithm/social-networking-graph/
 */
 #include<bits/stdc++.h>
 #define all(p)					p.begin(),p.end()
