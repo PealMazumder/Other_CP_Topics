@@ -1,5 +1,5 @@
 /*
-Problem Link: shorturl.at/klu12
+Problem Link: http://lightoj.com/volume_showproblem.php?problem=1112
 */
 #include<bits/stdc++.h>
 #define ll                      long long
