@@ -1,5 +1,5 @@
 /*
-Problem Link: shorturl.at/fkJZ6
+Problem Link: https://www.hackerearth.com/practice/algorithms/graphs/breadth-first-search/practice-problems/algorithm/t1-1-6064aa64/
 */
 #include<bits/stdc++.h>
 #define all(p)					p.begin(),p.end()
