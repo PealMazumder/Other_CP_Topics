@@ -1,5 +1,5 @@
 /*
-Problem Link: shorturl.at/iDES6
+Problem Link: https://www.hackerearth.com/practice/algorithms/graphs/breadth-first-search/practice-problems/algorithm/traffic-light-2-ee27ba45/
 */
 
 #include<bits/stdc++.h>
