@@ -1,5 +1,5 @@
 /*
-	Problem Link: shorturl.at/twKMX
+	Problem Link: http://lightoj.com/volume_showproblem.php?problem=1082
 	Relevent blog: http://www.shafaetsplanet.com/?p=1557
 */
 #include<bits/stdc++.h>
