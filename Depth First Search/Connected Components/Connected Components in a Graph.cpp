@@ -1,5 +1,5 @@
 /*
-Problem Link: shorturl.at/adxJY
+Problem Link: https://www.hackerearth.com/problem/algorithm/connected-components-in-a-graph/
 */
 #include<bits/stdc++.h>
 #define pb(x)						push_back(x)
