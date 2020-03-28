@@ -8,27 +8,27 @@ using namespace std;
 const int INF = 0x7f7f7f7f;
 const int modu = 1e9 + 7;
 const int N = 1e6+1;
-vector<int> lsp;
+vector<int> lps;
 void kmpPreprocess(string p, int len)
 {
-	for(int i = 0; i<len; i++) lsp.push_back(0);
+	for(int i = 0; i<len; i++) lps.push_back(0);
 	
 	for(int r = 1, l = 0; r<len; )
 	{
 		if(p[r] == p[l])
 		{
-			lsp[r] = l + 1;
+			lps[r] = l + 1;
 			r++,l++;
 		}
 		else
 		{
 			if(l == 0)
 			{
-				lsp[r] = 0;
+				lps[r] = 0;
 				r++;
 			}
 			else
-				l = lsp[l - 1];
+				l = lps[l - 1];
 		}
 	}	
 }
@@ -45,7 +45,7 @@ void kmp(string p, string t, int lnp)
 		else
 		{
 			if(j != 0)
-				j = lsp[j - 1];
+				j = lps[j - 1];
 			else
 				i++;
 		}
