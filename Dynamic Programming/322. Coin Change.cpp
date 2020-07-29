@@ -1,32 +1,26 @@
 //Problem Link: https://leetcode.com/problems/coin-change/
 class Solution {
+	const int INF = 100000000;
 public:
-    
     int coinChange(vector<int>& coins, int amount) {
-        sort(coins.begin(), coins.end());
         int dp[amount + 1];
-        for(int i = 0; i<=amount; i++) dp[i] = INT_MAX;
+        int n = (int)coins.size();
+        for(int i = 1; i <= amount; i++) dp[i] = INF;
         dp[0] = 0;
-        for(int c : coins)
+        for(int i = 1; i <= amount; i++)
         {
-            if(c <= amount)
-                dp[c] = 1;
-        }
-        for(int i = 1; i<=amount; i++)
-        {
-            if(dp[i] == INT_MAX)
+            if(dp[i] == INF)
             {
-                int tm = INT_MAX;
-                for(int j = 0; j<coins.size(); j++)
+                int tm = INF;
+                for(int j = 0; j<n; j++)
                 {
-                    if(coins[j]>i) break;
-                    else if(dp[i - coins[j]] != INT_MAX)
+                    if(coins[j] <= i)
                         tm = min(tm, 1 + dp[i - coins[j]]);
                 }
                 dp[i] = tm;
             }
         }
-        if(dp[amount] == INT_MAX) return -1;
+        if(dp[amount] == INF) return -1;
         return dp[amount];
     }
 };
