@@ -9,11 +9,8 @@ public:
             dp[n][i+1] = A[n-1][i];
         for(int i = n-1; i>=1; i--)
         {
-           for(int j = 1; j<=n; j++)
-           {
-                int curr = A[i-1][j-1];
-               dp[i][j] = A[i-1][j-1] + min(dp[i+1][j-1], min(dp[i+1][j], dp[i+1][j+1]));
-           }
+           	for(int j = 1; j<=n; j++)
+        		dp[i][j] = A[i-1][j-1] + min(dp[i+1][j-1], min(dp[i+1][j], dp[i+1][j+1]));
         }
         int ans = INT_MAX;
         for(int i = 1; i<=n; i++)
