@@ -11,7 +11,6 @@ void solve()
 	int n;
 	scanf("%d", &n);
 	char s[50];
-	
 	unordered_map<ll, int> mp;
 	int ans = 0;
 	const int p = 31;
@@ -19,13 +18,12 @@ void solve()
 	for(int i = 0; i<n; i++)
 	{
 		scanf("%s", s);
-		
-	    ll hash_value = 0;
-	    ll p_pow = 1;
+		ll hash_value = 0;
+	    	ll p_pow = 1;
 		for(int j = 0; j<strlen(s); j++)
 		{
 			hash_value = (hash_value + (s[j] - 'a' + 1) * p_pow) % m;
-	        p_pow = (p_pow * p) % m;
+	        	p_pow = (p_pow * p) % m;
 			mp[hash_value]++;
 			ans = max(ans, mp[hash_value] * (j+1));
 		}
