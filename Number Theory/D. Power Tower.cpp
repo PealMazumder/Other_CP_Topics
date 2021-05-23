@@ -1,4 +1,5 @@
 //Problem Link: https://codeforces.com/contest/906/problem/D
+/// Related Tutorial: https://cp-algorithms.com/algebra/phi-function.html
 #include<bits/stdc++.h>
 #define nl "\n"
 #define ll long long
