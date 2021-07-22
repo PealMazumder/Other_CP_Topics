@@ -11,23 +11,16 @@
 using namespace std;
 const ll INF = 1000000000000000000;
 const int N = 300005;
-vector<int> adj[N], dis(N);
-bool vis[N];
+vector<int> adj[N];
 int dia = 0, nd = 0;
-void dfs(int n, int d)
+void dfs(int n, int d, int par)
 {
-    vis[n] = true, dis[n] = d;
     if(d > dia)
         dia = d, nd = n;
 
     for(int child : adj[n])
-        if(!vis[child])
-            dfs(child, d + 1);
-}
-void Clear()
-{
-    for(int i = 0; i<N; i++)
-        vis[i] = false, dis[i] = 0;
+        if(child != par)
+            dfs(child, d + 1, n);
 }
 void solve()
 {
@@ -42,11 +35,9 @@ void solve()
     if(n == 1){
         cout<<"0\n"; return;
     }
-    dfs(a, 0);
+    dfs(a, 0, -1);
 
-    Clear();
-
-    dfs(nd, 0);
+    dfs(nd, 0, -1);
 
     cout<<dia * 3<<nl;
 }
