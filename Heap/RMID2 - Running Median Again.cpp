@@ -11,30 +11,16 @@ void solve()
 	while(true)
 	{
 		cin>>n;
-		if(n==0) return;
+		if(n == 0) return;
 		else if(n < 0)
 		{
-			int tsize = (int)mx.size() + (int)mn.size();
-			if(tsize % 2 == 0 && mx.top() > mn.top())
-			{
-				cout<<mn.top()<<nl;
-				mn.pop();
-				if(!mx.empty() && mx.size() != mn.size())
-				{
-					mn.push(mx.top());
-					mx.pop();
-				}
-			}
-			else
-			{
-				cout<<mx.top()<<nl;
-				mx.pop();
-				if(!mn.empty() && mx.size() != mn.size())
-				{
-					mx.push(mn.top());
-					mn.pop();
-				}
-			}
+            cout<<mx.top()<<nl;
+            mx.pop();
+            if(!mn.empty() && mx.size() != mn.size())
+            {
+                mx.push(mn.top());
+                mn.pop();
+            }
 		}
 		else
 		{
@@ -48,7 +34,7 @@ void solve()
 				mx.pop();
 			}
 			if(mx.size() < mn.size())
-			{	
+			{
 				mx.push(mn.top());
 				mn.pop();
 			}
@@ -59,7 +45,7 @@ int main()
 {
 	ios::sync_with_stdio(false);
 	cin.tie(0);cout.tie(NULL);
-	
+
 	int t;
 	cin>>t;
 	while(t--)
